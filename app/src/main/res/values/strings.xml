@@ -22,4 +22,25 @@
 
     <!-- Button label for Reset button -->
     <string name="reset_button">Reset</string>
+    <string name="settings_button">Settings</string>
+
+    <string-array name="array_colors">
+        <item>Blue</item>
+        <item>Red</item>
+        <item>Black</item>
+        <item>Green</item>
+    </string-array>
+
+    <string-array name="array_nums">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+    </string-array>
 </resources>
