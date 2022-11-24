@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
+
 import androidx.core.content.ContextCompat;
 
 /**
@@ -28,6 +29,10 @@ public class MainActivity extends Activity {
     // Text view to display both count and color
     private TextView mShowCountTextView;
 
+    String COLOR_KEY = "color";
+
+    String COUNT_KEY = "count";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
@@ -36,18 +41,17 @@ public class MainActivity extends Activity {
 
         // Initialize views, color, preferences
         mShowCountTextView = findViewById(R.id.count_textview);
-        mColor = ContextCompat.getColor(this, R.color.default_background);
+        mColor = R.color.default_background;
         String sharedPrefFile = "com.example.android.hellosharedprefs_91";
         SharedPreferences mPreferences = getSharedPreferences(sharedPrefFile, MODE_PRIVATE);
 
         // Key for current count
-        String COUNT_KEY = "count";
         mCount = mPreferences.getInt(COUNT_KEY, 0);
         mShowCountTextView.setText(String.format("%s", mCount));
+
         // Key for current color
-        String COLOR_KEY = "color";
         mColor = mPreferences.getInt(COLOR_KEY, mColor);
-        mShowCountTextView.setBackgroundColor(mColor);
+        mShowCountTextView.setBackgroundColor(getResources().getColor(mColor));
     }
 
     /**
@@ -93,7 +97,7 @@ public class MainActivity extends Activity {
     }
 
     public void settings(View view) {
-        Intent intent = new Intent(this,SecondActivity.class);
+        Intent intent = new Intent(this, SecondActivity.class);
         startActivity(intent);
     }
 }

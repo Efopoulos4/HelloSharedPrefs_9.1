@@ -25,6 +25,7 @@
     <string name="settings_button">Settings</string>
 
     <string-array name="array_colors">
+        <item>----</item>
         <item>Blue</item>
         <item>Red</item>
         <item>Black</item>
@@ -32,6 +33,7 @@
     </string-array>
 
     <string-array name="array_nums">
+        <item>-</item>
         <item>1</item>
         <item>2</item>
         <item>3</item>
